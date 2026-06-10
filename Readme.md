@@ -1,2 +1,4 @@
-Fantasy environment asset package
+Fantasy environment asset package:
 https://assetstore.unity.com/packages/3d/environments/fantasy-landscape-103573
+
+credits to Spinu2b for the original
