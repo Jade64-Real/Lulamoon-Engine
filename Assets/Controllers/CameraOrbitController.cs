@@ -43,6 +43,8 @@ public class CameraOrbitController : MonoBehaviour {
 		{
 			x += Input.GetAxis("Mouse X") * xSpeed * distance * 0.02f;
 			y -= Input.GetAxis("Mouse Y") * ySpeed * 0.02f;
+			x += UnityEngine.N3DS.GamePad.CirclePadPro.x * xSpeed * distance * 0.02f;
+			y -= UnityEngine.N3DS.GamePad.CirclePadPro.y * ySpeed * 0.02f;
 
 			y = ClampAngle(y, yMinLimit, yMaxLimit);
 

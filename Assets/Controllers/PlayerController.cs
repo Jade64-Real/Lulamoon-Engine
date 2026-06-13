@@ -73,6 +73,10 @@ public class PlayerController : MonoBehaviour {
 		horizontalAxis = Input.GetAxisRaw ("Horizontal");
 		verticalAxis = Input.GetAxisRaw ("Vertical");
 		jump = Input.GetButtonDown ("Jump");
+		horizontalAxis += UnityEngine.N3DS.GamePad.CirclePad.x;
+		verticalAxis += UnityEngine.N3DS.GamePad.CirclePad.y;
+		horizontalAxis = Mathf.Clamp(horizontalAxis, -1.0f, 1.0f);
+		verticalAxis = Mathf.Clamp(verticalAxis, -1.0f, 1.0f);
 	}
 
 	void GetCircumstances() {
